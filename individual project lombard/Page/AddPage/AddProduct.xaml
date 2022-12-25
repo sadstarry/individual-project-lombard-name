@@ -1,0 +1,53 @@
+﻿<Page x:Class="individual_project_lombard.Page.AddPage.AddProduct"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:individual_project_lombard.Page.AddPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddProduct">
+
+    <Grid Background="#FF4E4949">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="190*"></ColumnDefinition>
+            <ColumnDefinition Width="341*"></ColumnDefinition>
+            <ColumnDefinition Width="190*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="79*"></RowDefinition>
+            <RowDefinition Height="285*"></RowDefinition>
+            <RowDefinition Height="86*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Background="#3A3737" Grid.Column="1" Grid.Row="1" >
+            <TextBlock Foreground="White" FontFamily="Bahnschrift" TextAlignment="Center" FontSize="24" Margin="0,15,0,5" FontWeight="Bold">Добавить товар</TextBlock>
+            <StackPanel Orientation="Horizontal" Width="350"  Margin="5">
+                <TextBlock Foreground="White" FontFamily="Bahnschrift" Margin="3" Width="84" > Наименование</TextBlock>
+                <TextBox x:Name="Name" Width="250"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Width="350"  Margin="5">
+                <TextBlock Foreground="White" FontFamily="Bahnschrift" Margin="3" Width="84"> Описание</TextBlock>
+                <TextBox x:Name="Difi" Width="250"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Width="350"  Margin="5">
+                <TextBlock Foreground="White" FontFamily="Bahnschrift" Margin="3" Width="84">Цена</TextBlock>
+                <TextBox x:Name="Price1" Width="250"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                <Image Source="{Binding Image}" x:Name="Images" Width="97" Height="67">
+                    
+                </Image>
+                <Button x:Name="BtnAddImage" Click="BtnAddImage_Click" Height="24">Добавить фото</Button>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="207" Margin="15">
+                <Button x:Name="Add" Width="100" Margin="2" Click="Add_Click">
+                    Добавить
+                </Button>
+                <Button x:Name="Next" Width="100" Margin="2" Click="Next_Click">
+                    Назад
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
